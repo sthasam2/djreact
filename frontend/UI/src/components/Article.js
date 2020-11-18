@@ -22,42 +22,65 @@ const Articles = (props) => {
                 },
                 pageSize: 3,
             }}
+            // style={{
+            //     fontSize: "16px",
+            //     fontStyle: "italic"
+            // }}
             dataSource={props.data}
-
             renderItem={(item) => (
                 <List.Item
                     key={item.title}
-                    actions={[
-                        <IconText
-                            icon={StarOutlined}
-                            text="156"
-                            key="list-vertical-star-o"
-                        />,
-                        <IconText
-                            icon={LikeOutlined}
-                            text="156"
-                            key="list-vertical-like-o"
-                        />,
-                        <IconText
-                            icon={MessageOutlined}
-                            text="2"
-                            key="list-vertical-message"
-                        />,
-                    ]}
-                    extra={
-                        <img
-                            width={272}
-                            alt="logo"
-                            src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
-                        />
-                    }
+                    // actions={[
+                    //     <IconText
+                    //         icon={StarOutlined}
+                    //         text="156"
+                    //         key="list-vertical-star-o"
+                    //     />,
+                    //     <IconText
+                    //         icon={LikeOutlined}
+                    //         text="156"
+                    //         key="list-vertical-like-o"
+                    //     />,
+                    //     <IconText
+                    //         icon={MessageOutlined}
+                    //         text="2"
+                    //         key="list-vertical-message"
+                    //     />,
+                    // ]}
+                    // extra={
+                    //     <img
+                    //         width={272}
+                    //         alt="logo"
+                    //         src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
+                    //     />
+                    // }
                 >
                     <List.Item.Meta
-                        avatar={<Avatar src={item.avatar} />}
-                        title={<a href={`/${item.id}`}>{item.title}</a>}
-                        description={item.description}
+                        // avatar={<Avatar src={item.avatar} />}
+                        title={
+                            //   <h1>
+                            <a
+                                style={{
+                                    fontSize: "26px",
+                                    fontWeight: "bold",
+                                }}
+                                href={`/${item.id}`}
+                            >
+                                {item.title}
+                            </a>
+                            //   </h1>
+                        }
+                        description={
+                            <p
+                                style={{
+                                    fontSize: "16px",
+                                    fontStyle: "italic",
+                                }}
+                            >
+                                {item.content}
+                            </p>
+                        }
                     />
-                    {item.content}
                 </List.Item>
             )}
         />

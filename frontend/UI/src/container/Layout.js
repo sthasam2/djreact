@@ -22,9 +22,17 @@ const customLayout = (props) => {
                     </Menu.Item>
                 </Menu>
             </Header>
-            <Content style={{ padding: "0 50px" }}>
+
+            <Content
+                style={{
+                    padding: "1rem 1rem",
+                    background: "#ffffff",
+                    margin: "1rem 1rem",
+                }}
+            >
                 <div className="site-layout-content">{props.children}</div>
             </Content>
+
             <Footer style={{ textAlign: "center" }}>
                 Ant Design ©2018 Created by Ant UED
             </Footer>
